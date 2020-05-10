@@ -1,0 +1,46 @@
+body{
+background-image: linear-gradient(to right, tomato, salmon);
+
+color: white;
+text-align: center;
+font-family: Ubuntu, Verdana, sans-serif;
+}
+
+h1{
+text-shadow: 2px 3px 3px black;
+
+}
+
+#cajaJuego{
+background-color: salmon;
+width: 40%;
+margin: auto;
+border-radius: 2em;
+margin-top: 3em;
+}
+
+#num{
+font-size: 2em;
+padding: 0.5em;
+border-color: whitesmoke;
+border-radius: 10px;
+width: 2em;
+clear: both;
+}
+
+#num:focus{
+background-color: #F6FDB4;
+}
+
+#dale{
+width: 5em;
+border-radius: 10px;
+background-color: orangered;
+color: white;
+font-size: 1.5em;
+
+}
+
+ul li{
+list-style-type: square;
+}
