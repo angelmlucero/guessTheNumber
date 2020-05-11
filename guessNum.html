@@ -8,13 +8,15 @@
 </head>
 <body>
 <h1>Adivine el número, entre 1 y 20</h1>
-<h4>Tiene 5 intentos</h4>
+<h3>Tiene 5 intentos por vez</h3>
+<h4>Usted lleva <span id="cantidad">0</span> intento(s)</h4>
 <div id="cajaJuego">
 
-<input id="num" type="number" min="1" max="20" maxlength="2" placeholder="0"><br>
-
+<form onload="preventDefault()"><input id="num" type="number" min="1" max="20" maxlength="2" placeholder="0"><br>
 <button id="dale">Probar</button>
-<div id="mostrarNum"><h3>Sus intentos:</h3>
+</form>
+
+<div id="mostrarNum"><h3>Lista de números probados:</h3>
 <ul id="guarismos"></ul>
 
 <button id="pista">Pista..?</button>
@@ -30,59 +32,42 @@
 	function generar(){
 	var random	= Math.floor(Math.random()*20) +1
 	return random};
+	
 var intentitos = document.getElementById("intentos");
 var btn = document.getElementById("dale");
 var pista = document.getElementById("pista");
 var losLi = document.getElementsByTagName("li");
+
 let random = generar();
-var contador = 6;
+
+var cantidad = document.getElementById("cantidad");
 
 
 
-function contar() {
-	contador--;
-
-}
-
-let countDown = contar();
-btn.addEventListener("click", contar);
-
-	function anotar () {
+	function anotar (event) {
 	event.preventDefault();
 	
 	var ingreso = (document.getElementById("num").value);
 	var mostrar = document.getElementById("guarismos");
 		var guess = document.createElement("li");
 		var guessValue = document.createTextNode(ingreso);
-		guess.appendChild(guessValue);
-		mostrar.appendChild(guess);
-		
-			function nada() {
-			var retar = "No ingresó nada";
-			var textoLoco = document.createElement("p");
-			var coso = document.createTextNode(retar);
-			guess.appendChild(coso);
-			mostrar.appendChild(guess);
-			}
-			
-
+		if (guessValue != null) 
+		{guess.appendChild(guessValue);
+		mostrar.appendChild(guess) };
 			
 				switch(true) {
-				
 				
 				case ingreso == random:
 				alert("Ganaste!" );
 				location.reload() ;
 				break
-				case ingreso == "" :
-				nada();
-				break
-				case contador == 0:
+				
+				case losLi.length >= 5:
 				alert("¡Perdiste! Era " + random );
 				location.reload();
 				break
 				}
-
+cantidad.innerHTML = losLi.length;
 }
 
 
