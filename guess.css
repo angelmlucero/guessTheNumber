@@ -1,9 +1,11 @@
 body{
-background-color: tomato;
-
+background-image: radial-gradient(black, pink, red, salmon, yellow, green, blue, violet, white);
+background-size: cover;
+background-repeat: no-repeat;
 color: #1A1A1A;
 text-align: center;
 font-family: Ubuntu, Verdana, sans-serif;
+height: 100vh;
 }
 
 h1{
@@ -41,7 +43,7 @@ font-size: 1.5em;
 
 }
 h4{
-color: yellow;
+color: #4D4D4D;
 }
 
 ul{
@@ -49,6 +51,7 @@ padding: 0;
 margin: 0;}
 
 ul li{
+font-size:1em; 
 text-decoration: none;
 list-style: none;
 padding: 0;
@@ -57,4 +60,17 @@ color: #000EFF;
 font-weight: bold;
 padding-right: 1em;
 display: inline-block;
+animation: hola 1s ease;
+
+}
+
+@keyframes hola{
+0%{opacity: 0;}
+25%{transform:skew(30deg);}
+50%{font-size: 2em;
+transform: skew(-30deg)}
+70%{font-size: 2em;
+transform: skew(30deg)}
+100%{opacity: 1;
+font-size: 1em;}
 }
