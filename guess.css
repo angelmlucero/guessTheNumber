@@ -1,18 +1,18 @@
 body{
-background-image: linear-gradient(to right, tomato, salmon);
+background-color: tomato;
 
-color: white;
+color: #1A1A1A;
 text-align: center;
 font-family: Ubuntu, Verdana, sans-serif;
 }
 
 h1{
-text-shadow: 2px 3px 3px black;
+text-shadow: 2px 3px 3px white;
 
 }
 
 #cajaJuego{
-background-color: salmon;
+background-color: bisque;
 width: 40%;
 margin: auto;
 border-radius: 2em;
@@ -40,7 +40,21 @@ color: white;
 font-size: 1.5em;
 
 }
+h4{
+color: yellow;
+}
+
+ul{
+padding: 0;
+margin: 0;}
 
 ul li{
-list-style-type: square;
+text-decoration: none;
+list-style: none;
+padding: 0;
+margin: 0;
+color: #000EFF;
+font-weight: bold;
+padding-right: 1em;
+display: inline-block;
 }
