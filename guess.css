@@ -15,7 +15,8 @@ text-shadow: 2px 3px 3px white;
 
 #cajaJuego{
 background-color: bisque;
-width: 40%;
+width: 50%;
+  paddin: 2em;
 margin: auto;
 border-radius: 2em;
 margin-top: 3em;
