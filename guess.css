@@ -1,8 +1,8 @@
 body{
-background-image: url("arcade-jpg");
+background-image: url("arcade.jpg");
 background-size: cover;
 background-repeat: no-repeat;
-color: #1A1A1A;
+color:white;
 text-align: center;
 font-family: Ubuntu, Verdana, sans-serif;
 height: 100vh;
@@ -14,17 +14,19 @@ text-shadow: 2px 3px 3px white;
 }
 
 #cajaJuego{
-background-color: bisque;
+background-color: rgba(255,255,255,0.8);
 width: 50%;
   paddin: 2em;
 margin: auto;
 border-radius: 2em;
 margin-top: 3em;
+  color:black;
 }
 
 #num{
 font-size: 2em;
 padding: 0.5em;
+  margin:1em;
 border-color: whitesmoke;
 border-radius: 10px;
 width: 2em;
@@ -43,9 +45,7 @@ color: white;
 font-size: 1.5em;
 
 }
-h4{
-color: #4D4D4D;
-}
+
 
 ul{
 padding: 0;
